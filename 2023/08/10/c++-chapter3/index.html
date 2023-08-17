@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>C++逆序三位数 | fwlw的学习小站</title>
+  <title>C++-chapter3 | fwlw的学习小站</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="要求：逆序输出三位数1234567891011#include &lt;iostream&gt;using namespace std;int main () &amp;#123;    int a;    while(cin &gt;&gt; a)&amp;#123;    int bai &#x3D; a &#x2F; 100;    int shi &#x3D; a %100 &#x2F;10;    int ge &#x3D; a % 10;    co">
+  <meta name="description" content="要求： 代码实现如下123456789101112131415161718#include &lt;iostream&gt;using namespace std;const int Day_To_Hour &#x3D; 24; &#x2F;&#x2F; 天转换小时const int Hour_To_Minute &#x3D; 60; &#x2F;&#x2F;小时转换分钟const int Minute_To_Second &#x3D; 60; &#x2F;&#x2F;分钟转换秒int">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++逆序三位数">
-<meta property="og:url" content="http://example.com/2023/08/15/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6C++/index.html">
+<meta property="og:title" content="C++-chapter3">
+<meta property="og:url" content="http://example.com/2023/08/10/c++-chapter3/index.html">
 <meta property="og:site_name" content="fwlw的学习小站">
-<meta property="og:description" content="要求：逆序输出三位数1234567891011#include &lt;iostream&gt;using namespace std;int main () &amp;#123;    int a;    while(cin &gt;&gt; a)&amp;#123;    int bai &#x3D; a &#x2F; 100;    int shi &#x3D; a %100 &#x2F;10;    int ge &#x3D; a % 10;    co">
+<meta property="og:description" content="要求： 代码实现如下123456789101112131415161718#include &lt;iostream&gt;using namespace std;const int Day_To_Hour &#x3D; 24; &#x2F;&#x2F; 天转换小时const int Hour_To_Minute &#x3D; 60; &#x2F;&#x2F;小时转换分钟const int Minute_To_Second &#x3D; 60; &#x2F;&#x2F;分钟转换秒int">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6C++01.png">
-<meta property="article:published_time" content="2023-08-15T08:14:21.000Z">
-<meta property="article:modified_time" content="2023-08-17T13:47:05.678Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/C++primerplus02.png">
+<meta property="article:published_time" content="2023-08-10T08:14:21.000Z">
+<meta property="article:modified_time" content="2023-08-17T13:44:46.913Z">
 <meta property="article:author" content="fwlw">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6C++01.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/C++primerplus02.png">
   
     <link rel="alternative" href="/atom.xml" title="fwlw的学习小站" type="application/atom+xml">
   
@@ -157,11 +157,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-零基础学C++" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-c++-chapter3" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2023/08/15/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6C++/" class="article-date">
-  	<time datetime="2023-08-15T08:14:21.000Z" itemprop="datePublished">2023-08-15</time>
+      <a href="/2023/08/10/c++-chapter3/" class="article-date">
+  	<time datetime="2023-08-10T08:14:21.000Z" itemprop="datePublished">2023-08-10</time>
 </a>
     </div>
   
@@ -174,7 +174,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      C++逆序三位数
+      C++-chapter3
       
     </h1>
   
@@ -200,9 +200,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="要求：逆序输出三位数"><a href="#要求：逆序输出三位数" class="headerlink" title="要求：逆序输出三位数"></a>要求：逆序输出三位数</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; a)&#123;</span><br><span class="line">    <span class="type">int</span> bai = a / <span class="number">100</span>;</span><br><span class="line">    <span class="type">int</span> shi = a %<span class="number">100</span> /<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> ge = a % <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; ge &lt;&lt; shi &lt;&lt; bai &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="结果显示如下："><a href="#结果显示如下：" class="headerlink" title="结果显示如下："></a>结果显示如下：</h1><p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6C++01.png"></p>
+        <h1 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h1><p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/C++primerplus02.png"></p>
+<h1 id="代码实现如下"><a href="#代码实现如下" class="headerlink" title="代码实现如下"></a>代码实现如下</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> Day_To_Hour = <span class="number">24</span>; <span class="comment">// 天转换小时</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> Hour_To_Minute = <span class="number">60</span>; <span class="comment">//小时转换分钟</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> Minute_To_Second = <span class="number">60</span>; <span class="comment">//分钟转换秒</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> seconds = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> day,hour, minute = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请输入你的秒数&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; seconds;</span><br><span class="line">    day = seconds / (Day_To_Hour * Hour_To_Minute * Minute_To_Second);</span><br><span class="line">    seconds = seconds % (Day_To_Hour * Hour_To_Minute * Minute_To_Second);</span><br><span class="line">    hour = seconds / (Hour_To_Minute * Minute_To_Second);</span><br><span class="line">    seconds = seconds % (Hour_To_Minute * Minute_To_Second);</span><br><span class="line">    minute = seconds / Minute_To_Second;</span><br><span class="line">    seconds = seconds % Minute_To_Second; <span class="comment">//每次的秒的余数</span></span><br><span class="line">    cout &lt;&lt; day &lt;&lt;<span class="string">&quot;day&quot;</span> &lt;&lt; hour &lt;&lt;<span class="string">&quot;hour&quot;</span> &lt;&lt; minute &lt;&lt;<span class="string">&quot;minute&quot;</span> &lt;&lt; seconds &lt;&lt; <span class="string">&quot;seconds&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -212,18 +211,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/08/15/C++%E9%80%86%E5%BA%8F%E4%B8%89%E4%BD%8D%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/08/15/Linux%E5%9F%BA%E7%A1%80/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">&lt;</strong>
       <div class="article-nav-title">
         
-          零基础学C++
+          Linux基础
         
       </div>
     </a>
   
   
-    <a href="/2023/08/15/Linux%E5%9F%BA%E7%A1%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux基础</div>
+    <a href="/2023/08/09/C%E8%AF%AD%E8%A8%80%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C语言九九乘法表</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
