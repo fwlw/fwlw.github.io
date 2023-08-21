@@ -3,26 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>猴子吃桃 | fwlw的学习小站</title>
+  <title>fwlw的学习小站</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目： 代码实现：12345678910#include &lt;stdio.h&gt;int main () &amp;#123;    int n &#x3D; 0;    int peach &#x3D; 1;    scanf(&quot;%d&quot;, &amp;n);    for (int i &#x3D; 1; i &lt;n; i++) &amp;#123;        peach &#x3D; (peach + 1) * 2;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="猴子吃桃">
-<meta property="og:url" content="http://example.com/2023/08/20/%E7%8C%B4%E5%AD%90%E5%90%83%E6%A1%83/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="fwlw的学习小站">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="fwlw的学习小站">
-<meta property="og:description" content="题目： 代码实现：12345678910#include &lt;stdio.h&gt;int main () &amp;#123;    int n &#x3D; 0;    int peach &#x3D; 1;    scanf(&quot;%d&quot;, &amp;n);    for (int i &#x3D; 1; i &lt;n; i++) &amp;#123;        peach &#x3D; (peach + 1) * 2;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20230820225550.png">
-<meta property="article:published_time" content="2023-08-20T14:54:51.000Z">
-<meta property="article:modified_time" content="2023-08-21T06:22:55.490Z">
 <meta property="article:author" content="fwlw">
-<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20230820225550.png">
   
     <link rel="alternative" href="/atom.xml" title="fwlw的学习小站" type="application/atom+xml">
   
@@ -163,11 +156,13 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-猴子吃桃" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
+  
+    <article id="post-C++ primer plus 小节" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2023/08/20/%E7%8C%B4%E5%AD%90%E5%90%83%E6%A1%83/" class="article-date">
-  	<time datetime="2023-08-20T14:54:51.000Z" itemprop="datePublished">2023-08-20</time>
+      <a href="/2023/08/09/C++%20primer%20plus%20%E5%B0%8F%E8%8A%82/" class="article-date">
+  	<time datetime="2023-08-09T05:14:21.000Z" itemprop="datePublished">2023-08-09</time>
 </a>
     </div>
   
@@ -179,57 +174,40 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      猴子吃桃
-      
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/08/09/C++%20primer%20plus%20%E5%B0%8F%E8%8A%82/">
+        C++ primer plus 小节
+        
+      </a>
     </h1>
   
 
       </header>
       
-      <div class="article-info article-info-post">
-        
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C</a></li></ul>
-	</div>
-
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h1><p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20230820225550.png"></p>
-<h1 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> peach = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;n; i++) &#123;</span><br><span class="line">        peach = (peach + <span class="number">1</span>) * <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, peach);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h1><p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/C++primerplus01.png"></p>
+<h1 id="代码实现如下"><a href="#代码实现如下" class="headerlink" title="代码实现如下"></a>代码实现如下</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Time</span><span class="params">(<span class="type">int</span> hour, <span class="type">int</span> minutes)</span> </span>&#123;</span><br><span class="line"> cout &lt;&lt; hour &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; minutes;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line"> <span class="type">int</span> hour = <span class="number">0</span>;</span><br><span class="line"> <span class="type">int</span> minutes = <span class="number">0</span>;</span><br><span class="line"> cout &lt;&lt; <span class="string">&quot;Enter the number of hours&quot;</span> &lt;&lt; endl;</span><br><span class="line"> cin &gt;&gt; hour;</span><br><span class="line"> cout &lt;&lt; <span class="string">&quot;Enter the number of minutes&quot;</span> &lt;&lt; endl;</span><br><span class="line"> cin &gt;&gt; minutes;</span><br><span class="line"> <span class="built_in">Time</span>(hour, minutes);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2023/08/21/C%E8%AF%AD%E8%A8%80%E8%90%BD%E5%9C%B0%E5%B0%8F%E7%90%83/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">&lt;</strong>
-      <div class="article-nav-title">
-        
-          C语言落地小球
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2023/08/18/C%E8%AF%AD%E8%A8%80%E9%98%B6%E4%B9%98%E6%B1%82%E5%92%8C/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">C语言阶乘求和</div>
-      <strong class="article-nav-caption">&gt;</strong>
-    </a>
-  
-</nav>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li></ul>
+	</div>
 
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
   
 </article>
 
@@ -238,6 +216,13 @@
 
 
 
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -263,8 +248,8 @@
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
