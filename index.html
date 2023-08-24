@@ -158,6 +158,66 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-C语言字符串简单反转" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/08/24/C%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%80%E5%8D%95%E5%8F%8D%E8%BD%AC/" class="article-date">
+  	<time datetime="2023-08-24T14:19:34.000Z" itemprop="datePublished">2023-08-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/08/24/C%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%80%E5%8D%95%E5%8F%8D%E8%BD%AC/">
+        C语言字符串简单反转
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="题目要求："><a href="#题目要求：" class="headerlink" title="题目要求："></a>题目要求：</h1><p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20230824222024.png"></p>
+<h1 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Reverse</span><span class="params">(<span class="type">char</span> Array[])</span> &#123;</span><br><span class="line">	<span class="type">int</span> ArrayLen = <span class="number">0</span>;</span><br><span class="line">	ArrayLen = <span class="built_in">strlen</span>(Array); <span class="comment">// 计算传进来的字符长度</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = ArrayLen - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, Array[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">char</span> String[<span class="number">200</span>];</span><br><span class="line">	gets_s(String);</span><br><span class="line">	Reverse(String);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-C语言二维数组置换" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -684,104 +744,6 @@
 	</div>
 
       
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Linux基础" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/08/15/Linux%E5%9F%BA%E7%A1%80/" class="article-date">
-  	<time datetime="2023-08-15T05:14:21.000Z" itemprop="datePublished">2023-08-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/08/15/Linux%E5%9F%BA%E7%A1%80/">
-        Linux基础
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux下一切皆文件"><a href="#Linux下一切皆文件" class="headerlink" title="Linux下一切皆文件"></a>Linux下一切皆文件</h1><table>
-<thead>
-<tr>
-<th align="center">目录</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&#x2F;etc</td>
-<td>几乎所有的系统配置文件都在这个目录下，特别是passwd.shadow</td>
-</tr>
-<tr>
-<td align="center">&#x2F;boot</td>
-<td>开机配置文件，也是预设放置核心 vmlinuz 的地方</td>
-</tr>
-<tr>
-<td align="center">&#x2F;usr&#x2F;bin,&#x2F;bin</td>
-<td>一般执行档摆放的地方</td>
-</tr>
-<tr>
-<td align="center">&#x2F;usr&#x2F;sbin,&#x2F;sbin</td>
-<td>系统管理员常用指令集</td>
-</tr>
-<tr>
-<td align="center">&#x2F;dev</td>
-<td>摆放所有系统装置文件的目录</td>
-</tr>
-<tr>
-<td align="center">&#x2F;var&#x2F;log</td>
-<td>放系统注册表文件的地方</td>
-</tr>
-<tr>
-<td align="center">&#x2F;run</td>
-<td>CentOS 7 以后才有，将经常变动的项目(每次开机都不一样，例如程序的PID)移动到内存暂存，所以并不占用实际的磁盘容量</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
-	</div>
-
 
       
       <div class="clearfix"></div>
