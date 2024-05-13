@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>基于autojs实现的米游社签到 | fwlw的学习小站</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="代码实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687&#x2F;&#x2F;设备机型 2400*1080 vivoy73s&#x2F;&#x2F; 难点，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于autojs实现的米游社签到">
+<meta property="og:url" content="http://example.com/2023/01/22/%E5%9F%BA%E4%BA%8Eautojs%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B8%B8%E7%A4%BE%E7%AD%BE%E5%88%B0/index.html">
+<meta property="og:site_name" content="fwlw的学习小站">
+<meta property="og:description" content="代码实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687&#x2F;&#x2F;设备机型 2400*1080 vivoy73s&#x2F;&#x2F; 难点，">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-22T02:51:10.000Z">
+<meta property="article:modified_time" content="2024-05-12T16:51:40.366Z">
+<meta property="article:author" content="fwlw">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="fwlw的学习小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/feather.svg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/avator.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">fwlw</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">文章汇总</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="google" target="_blank" href="https://www.google.com.hk/" title="google">google</a>
+					        
+						</div>
+					
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=2088507144&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">未来拥有无限可能</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/avator.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">文章汇总</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="google" target="_blank" href="https://www.google.com.hk/" title="google">google</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-基于autojs实现的游社签到" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/22/%E5%9F%BA%E4%BA%8Eautojs%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B8%B8%E7%A4%BE%E7%AD%BE%E5%88%B0/" class="article-date">
+  	<time datetime="2023-01-22T02:51:10.000Z" itemprop="datePublished">2023-01-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基于autojs实现的米游社签到
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+	</div>
+
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设备机型 2400*1080 vivoy73s</span></span><br><span class="line"><span class="comment">// 难点，验证图片背景色，卡了两天，并且vivo的开发者模式老要重输入密码，累死。</span></span><br><span class="line"><span class="title class_">SetScreenMetrics</span>(<span class="number">1080</span>,<span class="number">2400</span>);</span><br><span class="line"><span class="comment">// 线程点掉开始截图</span></span><br><span class="line"><span class="comment">// 手机测试 锁屏密码为123456，可根据自己机型改一改</span></span><br><span class="line">    threads.<span class="title function_">start</span>(<span class="keyword">function</span>(<span class="params"></span>)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">22000</span>);</span><br><span class="line">    <span class="title function_">click</span>(<span class="number">766</span>,<span class="number">2149</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 解锁手机</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">unlock</span>(<span class="params"></span>)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">if</span>(!device.<span class="title function_">isScreenOn</span>());</span><br><span class="line">    &#123;</span><br><span class="line">    device.<span class="title function_">wakeUp</span>();</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">500</span>);</span><br><span class="line">    <span class="title function_">swipe</span>(<span class="number">554</span>,<span class="number">2291</span>,<span class="number">554</span>,<span class="number">1181</span>,<span class="number">210</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="comment">// 一位</span></span><br><span class="line">    <span class="title function_">click</span>(<span class="number">249</span>,<span class="number">1422</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">100</span>);</span><br><span class="line">    <span class="comment">// 二位</span></span><br><span class="line">    <span class="title function_">click</span>(<span class="number">557</span>,<span class="number">1418</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">100</span>);</span><br><span class="line">    <span class="comment">// 三位</span></span><br><span class="line">    <span class="title function_">click</span>(<span class="number">824</span>,<span class="number">1422</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">100</span>);</span><br><span class="line">    <span class="comment">// 四位</span></span><br><span class="line">    <span class="title function_">click</span>(<span class="number">304</span>,<span class="number">1661</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">100</span>);</span><br><span class="line">    <span class="comment">// 五位</span></span><br><span class="line">    <span class="title function_">click</span>(<span class="number">559</span>,<span class="number">1662</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">100</span>);</span><br><span class="line">    <span class="comment">// 六位</span></span><br><span class="line">    <span class="title function_">click</span>(<span class="number">858</span>,<span class="number">1670</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">2000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">unlock</span>();</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">StartMYS</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="title class_">AppName1</span> = <span class="string">&quot;Auto.js&quot;</span>;</span><br><span class="line">    <span class="title function_">launchApp</span>(<span class="title class_">AppName1</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">1500</span>);</span><br><span class="line">    <span class="keyword">var</span> <span class="title class_">Appname</span> = <span class="string">&quot;米游社&quot;</span>;</span><br><span class="line">    <span class="title function_">launchApp</span>(<span class="title class_">Appname</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">7000</span>);</span><br><span class="line">    <span class="keyword">if</span>(<span class="title function_">className</span>(<span class="string">&quot;android.widget.TextView&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;我知道了&quot;</span>).<span class="title function_">exists</span>())&#123;</span><br><span class="line">    <span class="title function_">className</span>(<span class="string">&quot;android.widget.TextView&quot;</span>).<span class="title function_">text</span>(<span class="string">&quot;我知道了&quot;</span>).<span class="title function_">findOne</span>().<span class="title function_">click</span>()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="title function_">click</span>(<span class="number">332</span>,<span class="number">468</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">4000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">StartMYS</span>();</span><br><span class="line">    <span class="keyword">if</span>(!<span class="title function_">requestScreenCapture</span>())&#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&quot;请求截图失败&quot;</span>);</span><br><span class="line">    <span class="title function_">exit</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">600</span>);</span><br><span class="line">    <span class="title function_">jiepin</span>();</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">jiepin</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">captureScreen</span>(<span class="string">&quot;/sdcard/img/MYS签到&quot;</span> + <span class="string">&quot;.jpg&quot;</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">2000</span>);</span><br><span class="line">    <span class="title function_">toastLog</span>(<span class="string">&quot;截屏完成&quot;</span>);</span><br><span class="line">    <span class="title function_">sleep</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="title class_">LoadImg</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">LoadImg</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> src = images.<span class="title function_">read</span>(<span class="string">&quot;/sdcard/img/MYS签到.jpg&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> point = images.<span class="title function_">findColor</span>(src,<span class="string">&quot;#fac3ac&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (point)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="title function_">toastLog</span>(<span class="string">&quot;找到,坐标为(&quot;</span> + point.<span class="property">x</span> + <span class="string">&quot;,&quot;</span> + point.<span class="property">y</span> + <span class="string">&quot;)&quot;</span>);</span><br><span class="line">        <span class="title function_">sleep</span>(<span class="number">2000</span>);</span><br><span class="line">        <span class="comment">//点击坐标</span></span><br><span class="line">        <span class="title function_">click</span>(point.<span class="property">x</span>,point.<span class="property">y</span>);</span><br><span class="line">        <span class="title function_">sleep</span>(<span class="number">2000</span>);</span><br><span class="line">        <span class="title function_">toastLog</span>(<span class="string">&quot;签到成功&quot;</span>)</span><br><span class="line">        <span class="title function_">sleep</span>(<span class="number">2000</span>);</span><br><span class="line">        <span class="title function_">exit</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="title function_">toastLog</span>(<span class="string">&quot;未找到&quot;</span>);</span><br><span class="line">        <span class="title function_">exit</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/06/25/Python%E7%AE%80%E5%8D%95%E7%BD%91%E7%BB%9C%E5%9B%BE%E7%89%87%E7%88%AC%E8%99%AB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          Python简单网络图片爬虫
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2024 fwlw
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

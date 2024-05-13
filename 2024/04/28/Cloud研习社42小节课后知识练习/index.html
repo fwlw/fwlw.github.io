@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Cloud研习社42小节课后知识练习 | fwlw的学习小站</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1tar -zxv -f ceph_log.tar.gz     1234# 首先进行一次全量备份# -l参数后面接备份等级 -L 后面写的是标签，-M可以写这个文件的作用 -f后面接备份文件名# 因为xfsdump只能备份文件系统，所以不能自己创建目录实验 所以用&#x2F;boot代替xfsdump -l 0 -L FistBackup -M data_bak -f &#x2F;backup&#x2F;bootba">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cloud研习社42小节课后知识练习">
+<meta property="og:url" content="http://example.com/2024/04/28/Cloud%E7%A0%94%E4%B9%A0%E7%A4%BE42%E5%B0%8F%E8%8A%82%E8%AF%BE%E5%90%8E%E7%9F%A5%E8%AF%86%E7%BB%83%E4%B9%A0/index.html">
+<meta property="og:site_name" content="fwlw的学习小站">
+<meta property="og:description" content="1tar -zxv -f ceph_log.tar.gz     1234# 首先进行一次全量备份# -l参数后面接备份等级 -L 后面写的是标签，-M可以写这个文件的作用 -f后面接备份文件名# 因为xfsdump只能备份文件系统，所以不能自己创建目录实验 所以用&#x2F;boot代替xfsdump -l 0 -L FistBackup -M data_bak -f &#x2F;backup&#x2F;bootba">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/Cloud%E7%A0%94%E4%B9%A0%E7%A4%BE42%E5%B0%8F%E8%8A%82.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240428224301.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240428225012.png">
+<meta property="article:published_time" content="2024-04-28T14:03:10.000Z">
+<meta property="article:modified_time" content="2024-04-28T15:31:20.890Z">
+<meta property="article:author" content="fwlw">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/Cloud%E7%A0%94%E4%B9%A0%E7%A4%BE42%E5%B0%8F%E8%8A%82.png">
+  
+    <link rel="alternative" href="/atom.xml" title="fwlw的学习小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/feather.svg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/avator.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">fwlw</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">文章汇总</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="google" target="_blank" href="https://www.google.com.hk/" title="google">google</a>
+					        
+						</div>
+					
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=2088507144&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Python/" style="font-size: 13.33px;">Python</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">未来拥有无限可能</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/avator.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">文章汇总</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="google" target="_blank" href="https://www.google.com.hk/" title="google">google</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Cloud研习社42小节课后知识练习" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2024/04/28/Cloud%E7%A0%94%E4%B9%A0%E7%A4%BE42%E5%B0%8F%E8%8A%82%E8%AF%BE%E5%90%8E%E7%9F%A5%E8%AF%86%E7%BB%83%E4%B9%A0/" class="article-date">
+  	<time datetime="2024-04-28T14:03:10.000Z" itemprop="datePublished">2024-04-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Cloud研习社42小节课后知识练习
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+	</div>
+
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/Cloud%E7%A0%94%E4%B9%A0%E7%A4%BE42%E5%B0%8F%E8%8A%82.png"></p>
+<ol>
+<li></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxv -f ceph_log.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先进行一次全量备份</span></span><br><span class="line"><span class="comment"># -l参数后面接备份等级 -L 后面写的是标签，-M可以写这个文件的作用 -f后面接备份文件名</span></span><br><span class="line"><span class="comment"># 因为xfsdump只能备份文件系统，所以不能自己创建目录实验 所以用/boot代替</span></span><br><span class="line">xfsdump -l 0 -L FistBackup -M data_bak -f /backup/bootbak.dump /boot</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240428224301.png"></p>
+<p>执行完后可以看到成功全备份了</p>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 接下来就用dd命令做在/boot目录建一个一个40M的文件</span></span><br><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/zero of=<span class="built_in">test</span> bs=4M count=10</span><br><span class="line"><span class="comment"># 做增量备份</span></span><br><span class="line">xfsdump -l 2 -L adddatabak -M data_bakadd -f /backup/bootbak.dump2 /boot</span><br><span class="line"><span class="comment"># 查看备份内容</span></span><br><span class="line">xfsdump -I</span><br></pre></td></tr></table></figure>
+
+<p>执行完后可以看到增量备份也完成了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240428225012.png"></p>
+<ol start="3">
+<li></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看下是否有完整备份</span></span><br><span class="line">xfdump -I</span><br><span class="line"><span class="comment"># 知道session的label name后在-L 后面加上参数 还原</span></span><br><span class="line"><span class="comment"># 接下来做还原数据备份</span></span><br><span class="line"><span class="comment"># 直接覆盖到/boot</span></span><br><span class="line">xfsrestore -f /backup/bootbak.dump -L FistBackup /boot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增量备份还原 增量备份每次只备份上一次备份 有变化的文件</span></span><br><span class="line">xfsrestore -f /backup/bootbak.dump2 /boot</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/05/08/crontab%E5%AE%9A%E6%97%B6%E8%AF%AD%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          crontab定时语法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/04/28/Cloud%E7%A0%94%E4%B9%A0%E7%A4%BE41%E5%B0%8F%E8%8A%82%E8%AF%BE%E5%90%8E%E5%AE%9E%E8%B7%B5%E5%86%85%E5%AE%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Cloud研习社41小节课后实践内容</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2024 fwlw
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
