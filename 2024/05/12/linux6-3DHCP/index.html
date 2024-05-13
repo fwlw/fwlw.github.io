@@ -9,25 +9,25 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编辑-&gt;虚拟网络编辑器，把子网IP改成对应的192.168.152.0  改网关IP，然后点进DNS设置把它改成对应的地址  回到虚拟机里面改对应的配置文件  注意改完dns配置文件客户端会离线，不能连上去，先回虚拟机里面打 systemctl dhcpd启动一下这个服务 看到绿色的active就是成功运行 再回到刚刚的配置DNS那里  把它勾上重新然后连接，回去虚拟机再打一遍 syste">
+  <meta name="description" content="编辑-&gt;虚拟网络编辑器，把子网IP改成对应的192.168.152.0 再进入dhcp设置，设置成这样  改网关IP，然后点进DNS设置把它改成对应的地址  回到虚拟机里面改对应的配置文件  注意改完dns配置文件客户端会离线，不能连上去，先回虚拟机里面打 systemctl dhcpd启动一下这个服务 看到绿色的active就是成功运行 再回到刚刚的配置DNS那里  把它勾上重新然后连接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux6-3 DHCP">
 <meta property="og:url" content="http://example.com/2024/05/12/linux6-3DHCP/index.html">
 <meta property="og:site_name" content="fwlw的学习小站">
-<meta property="og:description" content="编辑-&gt;虚拟网络编辑器，把子网IP改成对应的192.168.152.0  改网关IP，然后点进DNS设置把它改成对应的地址  回到虚拟机里面改对应的配置文件  注意改完dns配置文件客户端会离线，不能连上去，先回虚拟机里面打 systemctl dhcpd启动一下这个服务 看到绿色的active就是成功运行 再回到刚刚的配置DNS那里  把它勾上重新然后连接，回去虚拟机再打一遍 syste">
+<meta property="og:description" content="编辑-&gt;虚拟网络编辑器，把子网IP改成对应的192.168.152.0 再进入dhcp设置，设置成这样  改网关IP，然后点进DNS设置把它改成对应的地址  回到虚拟机里面改对应的配置文件  注意改完dns配置文件客户端会离线，不能连上去，先回虚拟机里面打 systemctl dhcpd启动一下这个服务 看到绿色的active就是成功运行 再回到刚刚的配置DNS那里  把它勾上重新然后连接">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240512232652.png">
-<meta property="og:image" content="c:\Users\fwlw\AppData\Roaming\Typora\typora-user-images\image-20240512233330945.png">
-<meta property="og:image" content="c:\Users\fwlw\AppData\Roaming\Typora\typora-user-images\image-20240512233432831.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240513131048.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240513130708.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240513131301.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240512233938.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240512234309.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240512234749.png">
 <meta property="article:published_time" content="2024-05-12T15:11:44.000Z">
-<meta property="article:modified_time" content="2024-05-13T04:23:20.311Z">
+<meta property="article:modified_time" content="2024-05-13T05:13:39.758Z">
 <meta property="article:author" content="fwlw">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240512232652.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240513131048.png">
   
     <link rel="alternative" href="/atom.xml" title="fwlw的学习小站" type="application/atom+xml">
   
@@ -207,11 +207,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240512232652.png"></p>
+        <p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240513131048.png"></p>
 <p>编辑-&gt;虚拟网络编辑器，把子网IP改成对应的192.168.152.0</p>
-<p><img src="C:\Users\fwlw\AppData\Roaming\Typora\typora-user-images\image-20240512233330945.png" alt="image-20240512233330945"></p>
+<p>再进入dhcp设置，设置成这样</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240513130708.png"></p>
 <p>改网关IP，然后点进DNS设置把它改成对应的地址</p>
-<p><img src="C:\Users\fwlw\AppData\Roaming\Typora\typora-user-images\image-20240512233432831.png" alt="image-20240512233432831"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240513131301.png"></p>
 <p>回到虚拟机里面改对应的配置文件</p>
 <p><img src="https://cdn.jsdelivr.net/gh/fwlw/HexoFiles/files/20240512233938.png"></p>
 <p>注意改完dns配置文件客户端会离线，不能连上去，先回虚拟机里面打</p>
